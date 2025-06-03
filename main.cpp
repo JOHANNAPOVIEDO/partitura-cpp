@@ -6,7 +6,7 @@
 #include "Partitura.h"  
 #include "Letra.h"
 
-//La función splitPorComas toma una línea de texto que contiene varias palabras separadas por comas.
+// La función splitPorComas toma una línea de texto que contiene varias palabras separadas por comas.
 static std::vector<std::string> splitPorComas(const std::string& linea) {
     std::vector<std::string> resultado;
     std::stringstream ss(linea);
@@ -61,9 +61,9 @@ int main() {
     std::cout << "=== IMPRIMIENDO PARTITURA ===\n\n";
     for (Cancion* c = miPartitura->primeraCancion; c; c = c->sigCancion) {
         std::cout << "Cancion: " << c->nombre << "\n";
-        int n = 1;
+        int contadorLinea = 1;
         for (Letra* l = c->primeraLetra; l; l = l->sig) {
-            std::cout << "  Linea" << n++ << ": " << l->texto << "\n";
+            std::cout << "  linea" << contadorLinea++ << ": " << l->texto << "\n";
         }
         std::cout << "\n";
     }
